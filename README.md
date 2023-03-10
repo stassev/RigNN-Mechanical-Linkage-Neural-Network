@@ -3,11 +3,13 @@ This is a set of Python functions that offers the ability to create 2D mechanica
 
 ## Motivation
 
-This project was made for fun. The idea is to use a mechanical linkage as a mechanistic model of a highly non-linear neural net. The parameters of the neural net are the lengths of the struts (or links). Those can be optimized for different applications. 
+This project was made for fun. The idea is to use a mechanical linkage as a mechanistic model of a highly non-linear neural net. The parameters of the neural net are the lengths of the struts (or links) and/or the motion of the "input" joints. Those can be optimized for different applications. Note that because of the mechanical constraints, each neuron (strut) is non-linear, unlike the linear neurons used in standard neural nets. (Of course, for small strut movements, the kinematics equations for each joint in a mechanical linkage can be linearized. However, they remain non-linear in the general case.)
 
-In the examples below we show different mechanical linkages that start with three nodes (or joints) and end with one joint. Two of the first three joints are fixed and the third describes circular motion around one of the fixed joints. The last node in each network can be thought of as being attached to a stylus that draws different shapes. This type of network was motivated by the Strandbeest creation by Theo Jansen. 
+In the examples below we show different mechanical linkages that start with three nodes (or joints) and end with one joint. Two of the first three joints are fixed and the third node describes circular motion around one of the fixed joints. The last node in each network can be thought of as being attached to a stylus that draws different shapes. This type of network was motivated by the Strandbeest creation by Theo Jansen. 
 
-The code includes utilities for the creation of arbitrary networks of arbitrary number of inputs and outputs. Some of those are illustrated below.
+One can envision modifications to the above scenario. One can use more than three input nodes, with different input nodes moving in different ways. One can use more than one output node, the position of which can be treated as the output of the neural net. The constraint of 2D motion can be lifted and the struts can be allowed to move in 3D or even in N-dimensional space, allowing for more back-connections per node, rather than the current 2 per node required by the mechanical constraints.
+
+The code includes utilities for the creation of arbitrary networks of arbitrary number of inputs and outputs corresponding to mechanical linkages in 2D. Some of those are illustrated below.
 
 ## Examples
 
@@ -145,4 +147,4 @@ And these are the traces obtained by the nodes of the mechanical linkage as node
 
 **Author:** Svetlin Tassev (2022-2023)
 
-**License:** GPLv3
+**License:** GNU General Public License v3.0
