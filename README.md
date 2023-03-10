@@ -37,7 +37,7 @@ Below is a video of the corresponding motion of the joints in the linkage.
 https://user-images.githubusercontent.com/6117115/224114162-71b9a748-5c1f-42cb-b7ba-ab20aecd5d9a.mp4
 
 
-### 2. Mechanical linkage as a highly non-linear Neural Net. Using PyTorch to optimize a mechanical linkage to draw a Lissajous figure.
+### 2. A RigNN example. Using PyTorch to optimize a mechanical linkage to draw a Lissajous figure.
 
 The linkage graph can be considered a non-linear net with parameters given by the linkage lengths. Here we use PyTorch to optimize those parameters such that the last node of the mechanical linkage draws a Lissajous figure.
 
