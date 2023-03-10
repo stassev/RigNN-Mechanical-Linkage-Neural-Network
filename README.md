@@ -1,4 +1,4 @@
-# Neural-Mechanical-Linkage
+# Mechanical-Linkage-Neural-Network
 This is a set of Python functions that offers the ability to create 2D mechanical linkages consisting of struts and joints. The scripts allow one to treat the mechanical network of linkages between the struts as a fully non-linear neural net (with non-linear neurons), which can be optimized to perform different functions. 
 
 ## Motivation
