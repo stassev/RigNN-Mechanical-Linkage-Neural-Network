@@ -143,6 +143,6 @@ And these are the traces obtained by the nodes of the mechanical linkage as node
 
 ## License
 
-**Author:** Svetlin Tassev (2023)
+**Author:** Svetlin Tassev (2022-2023)
 
 **License:** GPLv3
