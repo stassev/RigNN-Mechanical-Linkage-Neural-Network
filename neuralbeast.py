@@ -1,5 +1,6 @@
 #**Copyright:** Svetlin Tassev (2022-2023)
-#**License:** GPLv3
+#**License:** GNU General Public License v3.0
+#This file is part of Mechanical-Linkage-Neural-Network (https://github.com/stassev/Mechanical-Linkage-Neural-Network).
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
