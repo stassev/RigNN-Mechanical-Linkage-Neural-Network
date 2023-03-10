@@ -5,7 +5,7 @@ This is a set of Python functions that offers the ability to create 2D mechanica
 
 This project was made for fun. The idea is to use a mechanical linkage as a mechanistic model of a highly non-linear neural net. The parameters of the neural net are the lengths of the struts (or links) and/or the motion of the "input" joints. Those can be optimized for different applications. Note that because of the mechanical constraints, each neuron (strut) is non-linear, unlike the linear neurons used in standard neural nets. (Of course, for small strut movements, the kinematics equations for each joint in a mechanical linkage can be linearized. However, they remain non-linear in the general case.)
 
-In the examples below we show different mechanical linkages that start with three nodes (or joints) and end with one joint. Two of the first three joints are fixed and the third node describes circular motion around one of the fixed joints. The last node in each network can be thought of as being attached to a stylus that draws different shapes. This type of network was motivated by the Strandbeest creation by Theo Jansen. 
+In the examples below we show different mechanical linkages that start with three nodes (or joints) and end with one joint. Two of the three "input" joints are fixed and the third describes circular motion around one of those fixed joints. The last node in each network can be thought of as being attached to a stylus that draws different shapes. This type of network was motivated by the Strandbeest creation by Theo Jansen (see example below). 
 
 One can envision modifications to the above scenario. One can use more than three input nodes, with different input nodes moving in different ways. One can use more than one output node, the position of which can be treated as the output of the neural net. The constraint of 2D motion can be lifted and the struts can be allowed to move in 3D or even in N-dimensional space, allowing for more back-connections per node, rather than the current 2 per node required by the mechanical constraints.
 
@@ -15,7 +15,7 @@ The code includes utilities for the creation of arbitrary networks of arbitrary 
 
 ### 1. Jansen's [Strandbeest](https://en.wikipedia.org/wiki/Jansen%27s_linkage)
 
-The Strandbeest example can be run by issuing the commands below in Python. The neural net is **not** used. Instead we are using the length parameters obtained by Theo Jansen.
+The Strandbeest example can be run by issuing the commands below in Python. Here we do **not** optimize the linkages with pyTorch. Instead we are using the length parameters obtained by Theo Jansen.
 
 	# First will show trajectories and once those that window is closed, 
 	# it will create an mkv video of the motion.
@@ -27,7 +27,7 @@ Below is the graph of connections for the Strandbeest mechanical linkage. The la
 ![](Strandbeest_example/strandbeest_net.png)
 
 
-Below this is a snapshot of the physical realization of the Strandbeest linkage with traces drawn by the motions of each node. The two fixed nodes are highlighted as dots. The one on the left is connected to the third input node which traces out a circle. The output node (circled) draws the shape at the bottom.
+Below is a snapshot of the physical realization of the Strandbeest linkage with traces drawn by the motions of each node. The two fixed nodes are highlighted as dots. The one on the left is connected to the third input node which traces out a circle. The output node (circled) draws the shape at the bottom.
 
 ![](Strandbeest_example/strandbeest_traj.png)
 
@@ -107,7 +107,7 @@ Below are the traces obtained by the nodes of the mechanical linkage as node `i2
 Below is a layered network, with the number of links specified in the list below. Intermediate layers are created as needed to satisfy the mechanical constraint of having only two backwards connections to each link. 
 
     In [1]: from Fgen3 import *
-    In [2]: F=genF_ManyLayers([3,5,15,1])
+    In [2]: F=genF_ManyLayers([3,5,15,1]) # Creates a graph connection matrix. See Fgen3.py
     In [3]: showF(F,node0connection=False,lines=False) # Show network
     In [4]: from utilities import setupCoo
     In [5]: lds=setupCoo(F) # Create a random realization of the mechanical linkage
