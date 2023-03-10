@@ -70,7 +70,7 @@ To create the network above, we issued the commands that follow. The function `R
 	   ...: # last joint in the network of joints relative to the input curve (blue).
 	   ...: # The best network parameters are saved in output*.pt (* iterates between 0 
 	   ...: # and 1 so that there is always one file that is definitely intact
-	   ...:  even if you kill the process).
+	   ...: # even if you kill the process).
 	   ...: # If process is killed by ctrl+C, the code will show the trajectory and exit.
 
 
