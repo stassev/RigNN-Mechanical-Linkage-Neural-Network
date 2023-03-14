@@ -1,3 +1,8 @@
+#**Copyright:** Svetlin Tassev (2022-2023)
+#**License:** GNU General Public License v3.0
+#This file is part of Mechanical-Linkage-Neural-Network (https://github.com/stassev/Mechanical-Linkage-Neural-Network).
+
+
 """
 #different F generators
 
