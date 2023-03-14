@@ -76,7 +76,7 @@ To create the network above, we issued the commands that follow. The function `R
 	   ...: # If process is killed by ctrl+C, the code will show the trajectory and exit.
 
 
-### Random linkage network
+### 3. Random linkage network
 
 Here are some examples which use the provided functions to create different linkage networks. The examples are not optimized for a particular purpose. They just illustrate random realization of the mechanical linkage neural net.
 
@@ -103,7 +103,7 @@ Below are the traces obtained by the nodes of the mechanical linkage as node `i2
 ![](Net_examples/random_traj.png)
 
 
-### A layered linkage network
+### 4. A layered linkage network
 
 
 Below is a layered network, with the number of links specified in the list below. Intermediate layers are created as needed to satisfy the mechanical constraint of having only two backwards connections to each link. 
@@ -129,7 +129,7 @@ Below one can see the traces obtained by the nodes of the mechanical linkage as 
 ![](Net_examples/layers_traj.png)
 
 
-### A ResNet type network
+### 5. A ResNet type network
 
 This network is mimicking the types of connections one encounters in Residual Networks. The main layers have number of nodes as follows: 3->3->3->3->2->1. And to those layers we attach a network that starts at the second layer above and ends at the forth layer with number of nodes as follows: (2nd layer in main network)->7->4->3->(4th layer in main network).
 
@@ -155,29 +155,53 @@ Below one can see the traces obtained by the nodes of the mechanical linkage as 
 
 ![](Net_examples/resnet_traj.png)
 
-### 3-dim examples of linkages
+### 6. Some 3-dimensional examples of linkages
 
-In the videos below, circular motion (blue circle) is transformed to motion of the last node drawn by the red curve.
+In the videos below, circular motion (blue circle) of node `i1` is transformed to motion of the last node drawn by the red curve.
 
+Here is another example:
 
 https://user-images.githubusercontent.com/6117115/224970417-4d4498a6-6d15-425b-a3db-0c42941fa928.mp4
 
+The linkage is graph is below:
+
+![image](https://user-images.githubusercontent.com/6117115/224976289-9a99b5dd-6a43-4074-81b3-1db2f80b2c5a.png)
 
 
 https://user-images.githubusercontent.com/6117115/224970458-716b5f8f-054c-40c3-b8ca-1819b43bf25a.mp4
 
+The linkage is graph is below:
 
+![image](https://user-images.githubusercontent.com/6117115/224975907-e7788437-166d-408e-b2ed-a6344a67adeb.png)
+
+Here is another example:
 
 https://user-images.githubusercontent.com/6117115/224970532-cc8857f3-cfe8-4254-94c6-68011068264a.mp4
 
-### 5-dimensional linkage example
+The linkage is graph is below:
 
-The video shows a 3D projection (which in turn is projected onto a 2D screen).
+![image](https://user-images.githubusercontent.com/6117115/224976064-5e09b7d8-4567-4cad-8b58-f2b7c30e32a0.png)
 
+To run the code, go to the N-dim folder and run:
 
+    In [1]: from move_simplex import *
+    In [2]: coo,LDS,CHOICE,V,F,Nin,Nout,Ndim,Nnodes=check_rotation(100) # check for 100 angle values that choice of LDS works
+    In [3]: plot_link(coo,LDS,CHOICE,V,F,Nin,Nout,Ndim,Nnodes,200,1) # 200 samples in angle. saved to png
+    In [4]: save_state('output.npz',coo,LDS,CHOICE,V,F,Nin,Nout,Ndim,Nnodes)
+
+The number of dimensions, the number of in/out-nodes, and linkage graph are defined in `single_realization_step1()` in `move_simplex.py`. Change those to your own liking before running the code.
+
+### 7. A 5-dimensional linkage example
+
+The video shows a 3D projection (which in turn is projected onto a 2D screen) of a 5D linkage.
 
 https://user-images.githubusercontent.com/6117115/224970658-9cbca1ab-8e77-4565-8e18-2915c97815b3.mp4
 
+The linkage graph is as follows:
+
+![image](https://user-images.githubusercontent.com/6117115/224975605-bf327fc3-1172-4e64-b5fb-302fbd059399.png)
+
+The above example is created with the code in the N-dim folder invoking the commands in the previous example. Just set Ndim=5 and create F to your liking with your choice of Nin and Nout.
 
 
 
