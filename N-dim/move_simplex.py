@@ -1,3 +1,8 @@
+#**Copyright:** Svetlin Tassev (2022-2023)
+#**License:** GNU General Public License v3.0
+#This file is part of Mechanical-Linkage-Neural-Network (https://github.com/stassev/Mechanical-Linkage-Neural-Network).
+
+
 from simplex import find_coordinates
 import numpy as np
 from Fgen3_ND import genF_Random,showF,genF_ManyLayers,genF_Stack
