@@ -9,7 +9,9 @@ In the examples below we show different mechanical linkages that start with thre
 
 One can envision modifications to the above scenario. One can use more than three input nodes, with different input nodes moving in different ways. One can use more than one output node, the position of which can be treated as the output of the neural net. The constraint of 2D motion can be lifted and the struts can be allowed to move in 3D or even in N-dimensional space, allowing for more back-connections per node, rather than the current 2 per node required by the mechanical constraints.
 
-This code includes utilities for the design of networks of arbitrary number of inputs and outputs corresponding to mechanical linkages in 2D. The types of networks that can be created are: random, multi-layered, ResNet-type and others (see `Fgen3.py`). It also includes a function which uses PyTorch to create linkages with a last node that traces out a supplied closed curve (see `neuralbeast.py`), thus treating the linkage explicitly as a non-linear neural net. Those capabilites are illustrated below.
+The main code includes utilities for the design of networks of arbitrary number of inputs and outputs corresponding to mechanical linkages in 2D. The types of networks that can be created are: random, multi-layered, ResNet-type and others (see `Fgen3.py`). It also includes a function which uses PyTorch to create linkages with a last node that traces out a supplied closed curve (see `neuralbeast.py`), thus treating the linkage explicitly as a non-linear neural net. Those capabilites are illustrated below.
+
+At the end of the examples section you can see videos of linkages in 3D and 5D. Those have not been converted to PyTorch yet, so no optimization is possible at this time. But the utilities for N-dim linkages are in NumPy so conversion to PyTorch should be straightforward. The N-dim code is in the N-dim folder.
 
 ## Examples
 
@@ -152,6 +154,30 @@ Below is the graph of one realization of the network:
 Below one can see the traces obtained by the nodes of the mechanical linkage as node `i2` goes in a circle around `i0`.
 
 ![](Net_examples/resnet_traj.png)
+
+### 3-dim examples of linkages
+
+In the videos below, circular motion (blue circle) is transformed to motion of the last node drawn by the red curve.
+
+
+https://user-images.githubusercontent.com/6117115/224970417-4d4498a6-6d15-425b-a3db-0c42941fa928.mp4
+
+
+
+https://user-images.githubusercontent.com/6117115/224970458-716b5f8f-054c-40c3-b8ca-1819b43bf25a.mp4
+
+
+
+https://user-images.githubusercontent.com/6117115/224970532-cc8857f3-cfe8-4254-94c6-68011068264a.mp4
+
+### 5-dimensional linkage example
+
+The video shows a 3D projection (which in turn is projected onto a 2D screen).
+
+
+
+https://user-images.githubusercontent.com/6117115/224970658-9cbca1ab-8e77-4565-8e18-2915c97815b3.mp4
+
 
 
 
