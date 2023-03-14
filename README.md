@@ -163,14 +163,14 @@ Here is another example:
 
 https://user-images.githubusercontent.com/6117115/224970417-4d4498a6-6d15-425b-a3db-0c42941fa928.mp4
 
-The linkage is graph is below:
+The linkage graph is below:
 
 ![image](https://user-images.githubusercontent.com/6117115/224976289-9a99b5dd-6a43-4074-81b3-1db2f80b2c5a.png)
 
 
 https://user-images.githubusercontent.com/6117115/224970458-716b5f8f-054c-40c3-b8ca-1819b43bf25a.mp4
 
-The linkage is graph is below:
+The linkage graph is below:
 
 ![image](https://user-images.githubusercontent.com/6117115/224975907-e7788437-166d-408e-b2ed-a6344a67adeb.png)
 
@@ -178,7 +178,7 @@ Here is another example:
 
 https://user-images.githubusercontent.com/6117115/224970532-cc8857f3-cfe8-4254-94c6-68011068264a.mp4
 
-The linkage is graph is below:
+The linkage graph is below:
 
 ![image](https://user-images.githubusercontent.com/6117115/224976064-5e09b7d8-4567-4cad-8b58-f2b7c30e32a0.png)
 
