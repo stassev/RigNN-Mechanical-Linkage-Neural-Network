@@ -13,6 +13,12 @@ The main code includes utilities for the design of networks of arbitrary number 
 
 At the end of the examples section you can see videos of linkages in 3D and 5D. The code to create those linkages resides in the N-dim folder. It is in NumPy and has not been converted to PyTorch yet, so no optimization is possible at this time in N-Dim beyond 2D. But since the code for N-Dim linkages is in NumPy, the conversion to PyTorch should be straightforward. 
 
+## Note on incorporating RigNN in a neural net
+
+RigNN can be used a network in its own right, or can be used as a connected non-linear layer. Note that the parameters of the network (the strut lengths) should satisfy triangle inequalities. Since that's a constraint on the parameters that is in general hard to satisfy, one can modify the network in a way that would make the triangle inequalities automatically hold. 
+
+Here is an example of how one may approach that. If two struts of lengths $l_1$ and $l_2$ are attached to two nodes a distance `s` apart, then the triangle inequalities are: $|l_1-l_2| < s$ and $l_1+l_2 > s$. If for example the second inequality is violated, then one can modify parameter $l_2\to l_2'$ using $l_2'= 2s-2l_1-l_2$, such that the new parameter satisfies the triangle inequality $l_1+l_2'>s$.
+
 ## Examples
 
 ### 1. Jansen's [Strandbeest](https://en.wikipedia.org/wiki/Jansen%27s_linkage)
